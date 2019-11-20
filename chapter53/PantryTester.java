@@ -8,7 +8,7 @@ public class PantryTester {
 		Jam apple = new Jam("Crab Apple", "9/30/99", 3);
 		Jam rhub = new Jam("Rhubarb", "10/31/99", 3);
 
-		Pantry hubbard = new Pantry(goose, apple);
+		Pantry hubbard = new Pantry(goose, apple, rhub);
 		System.out.println(hubbard);
 
 		boolean range = false;
@@ -41,6 +41,17 @@ public class PantryTester {
 				System.out.println(hubbard);
 				valid = true;
 			}
+
+			String mixOption = "";
+			System.out.println("Would you like to check for mixed fruits? -> y/n");
+			mixOption = scan.nextLine();
+			mixOption = scan.nextLine();
+			if (mixOption.equals("y")) {
+				range = false;
+				hubbard.mixedFruit();
+				System.out.println(hubbard);
+			} 
+
 		}	
 
 

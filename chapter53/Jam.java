@@ -31,5 +31,9 @@ public class Jam {
 			System.out.println("No jam in the jar!");
 		}
 	}
+
+	public int getCapacity() {
+		return this.capacity;
+	}
 	
 }

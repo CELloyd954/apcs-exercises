@@ -76,5 +76,32 @@ public class Pantry {
 	public void spread(int oz){
 		selected.spread(oz);
 	}
+
+	public void mixedFruit() {
+		
+		boolean mix = false;
+		int totalCapacity = 0;
+
+		if (jar2 != null && jar3 != null) {
+			if (jar1.getCapacity() <= 2 && jar2.getCapacity() <= 2 && jar3.getCapacity() <= 2) {
+				mix = true;
+				totalCapacity = jar1.getCapacity() + jar2.getCapacity() + jar3.getCapacity();
+			} 
+		} else if (jar2 != null) {
+			if (jar1.getCapacity() <= 2 && jar3.getCapacity() <= 2) {
+				mix = true;
+				totalCapacity = jar1.getCapacity() + jar2.getCapacity();
+			}
+		}
+		if (mix) {
+			jar1 = new Jam("Mixed fruit", "7/4/86", totalCapacity);
+			jar2 = null;
+			jar3 = null;
+		} else {
+			System.out.println("Not everything has less than 3 fluid ounces.");
+		}
+	}
+	
+
 	
 }
