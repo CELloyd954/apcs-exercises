@@ -3,7 +3,7 @@ import java.util.Random;
 public class PasswordChecker
 {
 	public static void main(String[] args) {
-		System.out.println("Enter a \"secret\" password: ");
+		System.out.println("Enter a \"secret\" password please: ");
 		Scanner scan = new Scanner(System.in);
 		String password = scan.nextLine();
 
